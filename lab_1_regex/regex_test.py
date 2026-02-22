@@ -22,17 +22,14 @@ class RegexExercisesTest(unittest.TestCase):
     def test_01_planets(self):
         results = self.bh_searcher.match_list(RegexExercises.planets())
         self.assertEqual(len(results), 44)
-        print(f"Résultats pour les planètes: {len(results)}")
 
     def test_02_dashes(self):
         results = self.bh_searcher.match_list(RegexExercises.dashes())
         self.assertEqual(len(results), 2155)
-        print(f"Résultats pour les tirets: {len(results)}")
 
     def test_03_quotes(self):
         results = self.bh_searcher.match_list(RegexExercises.quotes())
         self.assertEqual(len(results), 3219)
-        print(f"Résultats pour les guillemets: {len(results)}")
 
     def test_04_rain(self):
         results = self.bh_searcher.match_list(RegexExercises.rain())
@@ -96,7 +93,7 @@ class Helper:
 # Code permettant d'exécuter le pilote ou les tests
 if __name__ == '__main__':
     # Décommentez la ligne suivante pour vous aider à visualiser les résultats de vos expressions régulières
-    # Helper.main()
+    Helper.main()
     
     # Pour exécuter les tests unitaires avec l'option failfast, utilisez :
     unittest.main(failfast=True)

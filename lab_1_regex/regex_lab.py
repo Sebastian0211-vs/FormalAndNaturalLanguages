@@ -40,7 +40,7 @@ class RegexExercises:
         non alphanumérique, et que le deuxième guillemet ait un caractère non alphanumérique
         après lui.
         """
-        return r'(?<![a-zA-Z0-9])"[^"]+"(?![a-zA-Z0-9])'
+        return r'(?<![a-zA-Z0-9",])"[^"\n]+"(?=[^a-zA-Z0-9"\n])'
 
     
     def rain():
@@ -119,6 +119,6 @@ class RegexExercises:
         Ce motif doit correspondre à la première, aux neuvième à onzième, et aux cinq dernières lignes
         du fichier numbers.txt (c'est-à-dire, toutes les lignes contenant des nombres sans virgules).
         """
-        return r"^[+-]?\d+\.?\d*(?:[eE][+-]?\d+)?\s+"
+        return r"^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?\s+"
 
 
